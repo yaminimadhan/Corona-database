@@ -6,14 +6,19 @@
     <title>Document</title>
 </head>
 <body style="background-color: black; color: blanchedalmond;">
-    <h1>CORONA UPDATES</h1>
-    <p><%= details %> </p>
-    <form action="/" method="post">
-    </form>
-    <form action="/" method="POST">
-        <label for="city">Enter the name of your country</label>
-        <input type="text" name="country" placeholder="country-name">
+    <h1>CORONA IN INDIA</h1>
+    <p> Confirmed: <%=confirmed%> </p>
+    <p> Active: <%=active%> </p>
+    <p> Recovered: <%=recovered%> </p>
+    <p> Death: <%=death%> </p>
+    <% dataset.forEach(function(data){ %>
+        <p><%=data.state %> <br> confirmed:<%= data.confirmed %> <br> Active: <%=data.active%> <br> Recovered: <%=data.recovered%> <br> Death: <%=data.deaths%>  </p>
+    <% }) %>
+    
+    <!-- <form action="/" method="POST">
+        <label for="state">Search</label>
+        <input type="text" name="state" placeholder="state/City">
         <button type="submit">Submit</button>
-    </form>
+    </form> -->
 </body>
 </html>
