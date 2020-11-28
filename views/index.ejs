@@ -3,17 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Libre Baskerville' rel='stylesheet'>
     <title>Document</title>
+    <style>
+   h1 {
+      color: red;
+      font-size: 70px;
+      text-align: center;
+      font-family: 'Libre Baskerville';
+    }
+
+    p {
+      text-align: center;
+      font-size: 30px;
+      font-family: 'Libre Baskerville';
+      text-decoration: underline;
+    }
+
+    .confirm {
+      color: #53017D;
+
+    }
+
+    .act {
+      color: red;
+    }
+
+    .recover {
+      color: green;
+    }
+
+    .death {
+      color: blue;
+    }
+
+    #coronadetails {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #coronadetails td,
+    #coronadetails th {
+      border: 1.5px solid #ddd;
+      padding: 8px;
+    }
+
+    #coronadetails tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #coronadetails tr:hover {
+      background-color: #ddd;
+    }
+
+    #coronadetails th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+      width: 3%;
+    }
+  </style>
 </head>
-<body style="background-color: black; color: blanchedalmond;">
+<body>
+<div class="frontdetails">
     <h1>CORONA IN INDIA</h1>
-    <p> Confirmed: <%=confirmed%> </p>
-    <p> Active: <%=active%> </p>
-    <p> Recovered: <%=recovered%> </p>
-    <p> Death: <%=death%> </p>
-    <% dataset.forEach(function(data){ %>
-        <p><%=data.state %> <br> confirmed:<%= data.confirmed %> <br> Active: <%=data.active%> <br> Recovered: <%=data.recovered%> <br> Death: <%=data.deaths%>  </p>
-    <% }) %>
+    <p class="confirm"> Confirmed: <%=confirmed%> </p>
+    <p class="act"> Active: <%=active%> </p>
+    <p class="recover"> Recovered: <%=recovered%></p>
+    <p class="death"> Death: <%=death%> </p>
+  </div>
+  <table id="coronadetails">
+    <thread>
+      <tr>
+        <th>State</th>
+        <th>Confirmed</th>
+        <th>Active</th>
+        <th>Recovered</th>
+        <th>Death</th>
+      </tr>
+    </thread>
+    <tbody>
+      <% dataset.forEach(function(data){ %>
+      <tr>
+        <td><%= data.state %></td>
+        <td><%= data.confirmed %></td>
+        <td><%=data.active%></td>
+        <td><%=data.recovered%></td>
+        <td> <%=data.deaths%></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
     
     <!-- <form action="/" method="POST">
         <label for="state">Search</label>
