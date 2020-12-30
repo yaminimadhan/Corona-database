@@ -1,14 +1,39 @@
 const express=require("express");
-// const https=require("https");
 var https = require('follow-redirects').https;
 var fs = require('fs');
 const bodyParser=require("body-parser");
+const mongoose = require('mongoose');
+var path = require('path'); 
+var multer = require('multer');
 
 const app=express();
 
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
+
+var storage = multer.diskStorage({ 
+  destination: (req, file, cb) => { 
+      cb(null, 'uploads') 
+  }, 
+  filename: (req, file, cb) => { 
+      cb(null, file.fieldname + '-' + Date.now()) 
+  } 
+}); 
+
+var upload = multer({ storage: storage });
+
+mongoose.connect("mongodb://localhost:27017/NewsDB", {useNewUrlParser: true, useUnifiedTopology: true})
+const newsSchema = new mongoose.Schema({
+    title :String,
+    content :String,
+    image: { 
+      data: Buffer, 
+      contentType: String 
+  } 
+})
+const News = new mongoose.model('News',newsSchema);
+
 
 app.get("/", function(req, res){
    
@@ -84,6 +109,24 @@ app.get("/news", function(req,res){
 app.get("/article", function(req,res){
   res.render("article");
 })
+
+app.get("/compose", function(req,res){
+  res.render("compose");
+})
+
+app.post("/compose", upload.single('image'), (req, res, next) => {
+  var newnews = new News({ 
+    title:req.body.postTitle,
+    content:req.body.postBody,
+      image: { 
+          data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)), 
+          contentType: 'image/png'
+      } 
+  }); 
+  newnews.save();
+  console.log(newnews); 
+})
+
 
 // app.post("/", function(req, res){
 	    
