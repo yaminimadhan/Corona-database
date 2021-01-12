@@ -35,7 +35,7 @@ const newsSchema = new mongoose.Schema({
 const News = new mongoose.model('News',newsSchema);
 
 
-app.get("/", function(req, res){
+app.get("/cases", function(req, res){
    
   var options = {
     'method': 'GET',
@@ -102,8 +102,8 @@ app.get("/", function(req, res){
   request.end();
 });		
 
-app.get("/news", function(req,res){
-  res.render("news");
+app.get("/", function(req,res){
+  res.render("home");
 })
 
 app.get("/article", function(req,res){
@@ -120,14 +120,20 @@ app.post("/compose", upload.single('image'), (req, res, next) => {
     content:req.body.postBody,
       image: { 
           data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)), 
-          contentType: 'image/png'
+          contentType: 'image/jpg'
       } 
   }); 
   newnews.save();
   console.log(newnews); 
 })
 
-
+app.get("/news", function(req,res){
+  News.find({}, function(err, news){
+    res.render("news", {
+      news: news,
+      });
+  });
+})
 // app.post("/", function(req, res){
 	    
 //   var options = {

@@ -1,4 +1,64 @@
-<%- include('partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css" />
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo-dark2x.png" alt="" width="70%" height="50" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#homepg"><b>Home<span class="sr-only">(current)</span></b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about"><b>About Corona</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#symptom"><b>Symptoms</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#prevention"><b>Prevention</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><b>Treatment</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><b>News</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><b>Cases</b></a>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-primary">Do &amp; Don't</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 <section class="News">
     <div class="container">
@@ -10,31 +70,16 @@
                         <div class="double-bounce2"></div>
                     </div>
                 </div>
-                <h3 style="font-size: 15px; font-weight: bold">FLASH STORY</h3>
+                <h3 style="color: white; font-size: 15px;margin-top: 5px; margin-left: 35px; font-weight: bold">FLASH STORY</h3>
             </div>
             <div class="col-lg-10" style="background-color: white;">
                 <div class="exclusive-slides" dir="ltr">
-                    <marquee behavior="" direction="">
-                        <a style="margin-right: 40px; "
-                           href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                            Google hit with record EU fine over Shopping service
+                    <marquee  behavior="" direction="">
+                        <% for (var i = 0; i < news.length; i++) { %>
+                        <a style="margin-right: 40px;" href="/">  
+                            <%= news[i].title %>
                         </a>
-                        <a style="margin-right: 40px; "
-                           href="https://demo.afthemes.com/covernews/blog/business-booming-for-giant-cargo-planes/">
-                            Business booming for giant cargo planes
-                        </a>
-                        <a style="margin-right: 40px; "
-                           href="https://demo.afthemes.com/covernews/blog/trump-putin-your-toolkit-to-help-understand-the-story/">
-                            Trump-Putin: Your toolkit to help understand the story
-                        </a>
-                        <a style="margin-right: 40px;"
-                           href="https://demo.afthemes.com/covernews/blog/somebody-threatened-to-burn-the-school-down/">
-                            Somebody threatened to burn the school
-                        </a>
-                        <a style="margin-right: 40px;"
-                           href="https://demo.afthemes.com/covernews/blog/searching-for-the-forgotten-heroes-of-world-war-two/">
-                            Searching for the forgotten heroes of World War Two
-                        </a>
+                        <% } %>
                     </marquee>
                 </div>
             </div>
@@ -43,50 +88,23 @@
 
     <div class="container" style="padding: 0;">
         <div class="row" style="margin-top: 40px;">
-            <div class="col-md-6">
+
+            <div class="col-md-6 col=col-sm-12">
                 <h5>Headlines</h5>
                 <hr style="background-color: #bb1919; width: 60px; height: 2px; margin: 0; ">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"
                      style="margin-top: 15px; margin-bottom: 20px;">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="">
-                                <div style="background-image: url(https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/bar-local-cong-ireland-38286-1-1-936x897.jpeg);height: 450px; background-size: cover;">
-                                    <h2 class="mainstoryheader">Google hit with record EU fine over Shopping
-                                        service</h2>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="">
-                                <div style="background-image: url(https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/cargo-jet-c-17-airdrop-humvee-70347-1-1-936x897.jpeg);height: 450px; background-size: cover;">
-                                    <h2 class="mainstoryheader">Business booming for giant cargo planes</h2>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="">
-                                <div style="background-image: url(https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/pexels-photo-936237-1-1-936x897.jpeg);height: 450px; background-size: cover;">
-                                    <h2 class="mainstoryheader">Trump-Putin: Your toolkit to help understand the
-                                        story</h2>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="">
-                                <div style="background-image: url(https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/classroom-2093744_1920-1-936x897.jpg);height: 450px; background-size: cover;">
-                                    <h2 class="mainstoryheader">Somebody threatened to burn the school down</h2>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="">
-                                <div style="background-image: url(https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/green-attraction-war-museum-1-1-936x897.jpg);height: 450px; background-size: cover;">
-                                    <h2 class="mainstoryheader">Searching for the forgotten heroes of World War Two</h2>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                     <div class="carousel-inner">
+                        <% for (var i = 0; i < news.length; i++) { %>
+                            <div  class="carousel-item <%= i == 0 ? 'active' : '' %>">
+                                <a href="/">
+                                    <img style="height: 450px; background-size: cover;" src="data:image/<%=news[i].image.contentType%>;base64, 
+                                    <%=news[i].image.data.toString('base64')%>" class="d-block w-100" alt="">
+                                    <h4 class="mainstoryheader"><%= news[i].title %></h4>
+                                </a>
+                            </div>
+                        <% } %>
+                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                     </a>
@@ -95,59 +113,35 @@
                     </a>
                 </div>
             </div>
+
+
             <div class="col-md-3 col-sm-6 editorspickdiv" style="padding-left: 0;">
                 <h5></h5><br>
                 <hr style="background-color: #F5F5F5; width: 0; height: 2px; margin: 0;">
+                <% for (var i = 0; i < 2; i++) { %>
                 <a href="">
-                    <div style="background-image: url(https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/pexels-photo-936237-1-1-936x897.jpeg);height: 220px; background-size: cover; margin-top: 15px;">
-                        <h5 class="editorspickheader">Trump-Putin: Your toolkit to help understand the story</h5>
+                    <div style=" margin-top: 10px;">
+                        <img src="data:image/<%=news[i].image.contentType%>;base64, 
+                        <%=news[i].image.data.toString('base64')%>" style="height:160px; width: 277px;" alt="">
+                        <p class="editorspickheader"><%= news[i].title %></p>
                     </div>
                 </a>
-                <a href="">
-                    <div style="background-image: url(https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/green-attraction-war-museum-1-1-936x897.jpg);height: 220px; background-size: cover; margin-top: 10px;">
-                        <h5 class="editorspickheader">Searching for the forgotten heroes of World War Two</h5>
-                    </div>
-                </a>
-
+                <% } %>
             </div>
             <div class="col-md-3 col-sm-6" style="padding-left: 0;">
                 <h5></h5><br>
                 <hr style="background-color: #F5F5F5; width: 0; height: 2px; margin: 0;">
-                <div style="margin-top: 15px; margin-bottom: 0; background-color: white; height: 105px;">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
+                <% for (var i = 0; i < news.length; i++) { %>
+                <div style="margin-top: 10px; margin-bottom: 0; background-color: white; height: 105px;">
+                    <a href="">
                         <img style="height: 105px; width: 100px; margin-right: 7px; float: left;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/bar-local-cong-ireland-38286-1-1-150x150.jpeg"
+                             src="data:image/<%=news[i].image.contentType%>;base64, 
+                             <%=news[i].image.data.toString('base64')%>"
                              alt="">
-                        <p style="padding-top: 15px; padding-bottom: 15px;">Google hit with record EU fine over Shopping
-                            service</p>
+                        <p style="padding-top: 5px; padding-bottom: 5px; font-weight: bold; font-size: 15px;"><%= news[i].title %></p>
                     </a>
                 </div>
-                <div style=" background-color: white; height: 105px; margin-top: 10px;">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 105px; width: 100px; margin-right: 7px; float: left;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/cargo-jet-c-17-airdrop-humvee-70347-1-1-150x150.jpeg"
-                             alt="">
-                        <p style="padding-top: 15px; padding-bottom: 15px;">Business booming for giant cargo planes
-                            dh</p>
-                    </a>
-                </div>
-                <div style=" background-color: white; height: 105px; margin-top: 10px;">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 105px; width: 100px; margin-right: 7px; float: left;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/pexels-photo-936237-1-1-150x150.jpeg"
-                             alt="">
-                        <p style="padding-top: 15px; padding-bottom: 15px;">Trump-Putin: Your toolkit to help understand
-                            the story</p>
-                    </a>
-                </div>
-                <div style=" background-color: white;height: 105px;margin-top: 10px;">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 105px; width: 100px; margin-right: 7px; float: left;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/classroom-2093744_1920-1-150x150.jpg"
-                             alt="">
-                        <p style="padding-top: 15px; padding-bottom: 15px;">Somebody threatened to burn the school</p>
-                    </a>
-                </div>
+                <% } %>
             </div>
         </div>
     </div>
@@ -156,211 +150,65 @@
         <h5>Featured Stories</h5>
         <hr style="background-color: #bb1919; width: 60px; height: 2px; margin: 0;">
         <div class="row" style="margin-top: 15px;">
+            <% for (var i = 0; i < news.length; i++) { %>
             <div class="col-sm-6 col-lg-3">
                 <div style=" background-color: white; width: 265px;">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
+                    <a href="">
                         <img style="height: 250px; width: 265px;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/pexels-photo-936237-1-1-936x897.jpeg"
+                             src="data:image/<%=news[i].image.contentType%>;base64, 
+                             <%=news[i].image.data.toString('base64')%>"
                              alt="">
-                        <p style="margin-top: 5px; font-weight: 700; text-align: center;">Trump-Putin: Your toolkit to
-                            help understand the story </p>
+                        <p style="margin-top: 5px; font-weight: 700; text-align: center;"><%= news[i].title %></p>
                     </a>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
-                <div style=" background-color: white; width: 265px; ">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 250px; width: 265px; "
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/green-attraction-war-museum-1-1-936x897.jpg"
-                             alt="">
-                        <p style="margin-top: 5px; font-weight: 700; text-align: center;">Searching for the forgotten
-                            heroes of World War Two </p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div style=" background-color: white; width: 265px; ">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 250px;width: 265px; "
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/cargo-jet-c-17-airdrop-humvee-70347-1-1-936x897.jpeg"
-                             alt="">
-                        <p style="margin-top: 5px; font-weight: 700; text-align: center;">Business booming for giant
-                            cargo planes dh </p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div style=" background-color: white; width: 265px;">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 250px; width: 265px;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/bar-local-cong-ireland-38286-1-1-936x897.jpeg"
-                             alt="">
-                        <p style="margin-top: 5px; font-weight: 700; text-align: center;">Google hit with record EU fine
-                            over Shopping service </p>
-                    </a>
-                </div>
-            </div>
+            <% } %>
         </div>
-        <div style="margin-top: 20px;" >
-                <img src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/11/vertical-promo-red-news.jpg" alt="">
 
-        </div>
+
         <h5 style="padding-top: 40px; ">Top Stories</h5>
         <hr style="background-color: #bb1919; width: 60px; height: 2px; margin: 0;">
-        <div class="row">
-            <div class="col-lg-9 col-sm-12" style=" margin-top: 15px;">
-                <div style=" background-color: white; height: 165px; ">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 165px; width: 210px; margin-right: 7px; float: left;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/bar-local-cong-ireland-38286-1-1-150x150.jpeg"
+            <div  style=" margin-top: 15px;">
+                <% for (var i = 0; i < news.length; i++) { %>
+                <div style=" background-color: white; height: 240px; margin-bottom: 20px;  ">
+                    <a href="">
+                        <img style="height: 240px; width: 280px; margin-right: 10px; float: left;"
+                             src="data:image/<%=news[i].image.contentType%>;base64, 
+                             <%=news[i].image.data.toString('base64')%>"
                              alt="">
-                        <p style="padding-top: 15px;  font-weight: bold;">Google hit with record EU fine over Shopping
-                            service </p>
+                        <p style="padding-top: 15px;  font-weight: bold;"><%= news[i].title %></p>
                     </a>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
+                    <p style=" margin-right: 10px;">
+                        <%=news[i].content.substring(0, 600) + " ..."%>
+                        <a href=""> Read More</a>
+                        </p>
                 </div>
-                <div style=" background-color: white; height: 165px; margin-top: 15px; ">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 165px; width: 210px; margin-right: 7px; float: left;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/bar-local-cong-ireland-38286-1-1-150x150.jpeg"
-                             alt="">
-                        <p style="padding-top: 15px;  font-weight: bold;">Google hit with record EU fine over Shopping
-                            service </p>
-                    </a>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                </div>
-                <div style=" background-color: white; height: 165px; margin-top: 15px; ">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 165px; width: 210px; margin-right: 7px; float: left;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/bar-local-cong-ireland-38286-1-1-150x150.jpeg"
-                             alt="">
-                        <p style="padding-top: 15px;  font-weight: bold;">Google hit with record EU fine over Shopping
-                            service </p>
-                    </a>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                </div>
-                <div style=" background-color: white; height: 165px; margin-top: 15px; ">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 165px; width: 210px; margin-right: 7px; float: left;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/bar-local-cong-ireland-38286-1-1-150x150.jpeg"
-                             alt="">
-                        <p style="padding-top: 15px;  font-weight: bold;">Google hit with record EU fine over Shopping
-                            service </p>
-                    </a>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                </div>
-                <div style=" background-color: white; height: 165px; margin-top: 15px; ">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 165px; width: 210px; margin-right: 7px; float: left;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/bar-local-cong-ireland-38286-1-1-150x150.jpeg"
-                             alt="">
-                        <p style="padding-top: 15px;  font-weight: bold;">Google hit with record EU fine over Shopping
-                            service </p>
-                    </a>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                </div>
-                <div style=" background-color: white; height: 165px; margin-top: 15px; ">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 165px; width: 210px; margin-right: 7px; float: left;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/bar-local-cong-ireland-38286-1-1-150x150.jpeg"
-                             alt="">
-                        <p style="padding-top: 15px;  font-weight: bold;">Google hit with record EU fine over Shopping
-                            service </p>
-                    </a>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                </div>
-                <div style=" background-color: white; height: 165px; margin-top: 15px; ">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 165px; width: 210px; margin-right: 7px; float: left;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/bar-local-cong-ireland-38286-1-1-150x150.jpeg"
-                             alt="">
-                        <p style="padding-top: 15px;  font-weight: bold;">Google hit with record EU fine over Shopping
-                            service </p>
-                    </a>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                </div>
-                <div style=" background-color: white; height: 165px; margin-top: 15px; ">
-                    <a href="https://demo.afthemes.com/covernews/blog/google-hit-with-record-eu-fine-over-shopping-service/">
-                        <img style="height: 165px; width: 210px; margin-right: 7px; float: left;"
-                             src="https://demo.afthemes.com/covernews/wp-content/uploads/2018/07/bar-local-cong-ireland-38286-1-1-150x150.jpeg"
-                             alt="">
-                        <p style="padding-top: 15px;  font-weight: bold;">Google hit with record EU fine over Shopping
-                            service </p>
-                    </a>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                </div>
+                <% } %>
             </div>      
-        </div>
     </div>
 
-    
+    <footer>
+        <div class="footer-bg" style="color: white;">
+            <img src="images/logo-white2x.png" alt="" width="30%" height="50%" />
+            <p>This website is for health information and advice about coronavirus (COVID-19),
+                how to prevent and protect yourself from disease.
 
-    <div class="container" style="padding: 0;">
-        <div class="row" style="margin-top: 40px;">
-            <div class="col-lg-9">
-                <h5>Latest Videos</h5>
-                <hr style="background-color: #bb1919; width: 60px; height: 2px; margin: 0; ">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"
-                     style="margin-top: 15px; margin-bottom: 40px;">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="">
-                                <iframe width="850" height="400"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                </iframe>          
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="">
-                                <iframe width="850" height="400"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                </iframe> 
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="">
-                                <iframewidth="850" height="400"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                </iframe> 
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="">
-                                <iframe width="850" height="400"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                </iframe> 
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="">
-                                <iframe width="850" height="400"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                </iframe> 
-                            </a>
-                        </div>
-                       
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
-                </div>
-            </div>
-          
-           
+                Learn about the government response to coronavirus </p>
+
+
         </div>
-    </div>
+    </footer>
     
     
-
-<%- include('partials/footer') %>
+</section>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</html>
