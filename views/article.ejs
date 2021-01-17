@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css" />
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+    <title>Hello, world!</title>
+</head>
+
+<body style="background-color: #f7f9fe">
+
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo-dark2x.png" alt="" width="70%" height="50" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul style="padding-left: 300px;" class="navbar-nav mr-auto">
+                <li class="nav-item active" style="padding-right: 20px;">
+                    <a class="nav-link" href="/#homepg"><b>Home<span class="sr-only">(current)</span></b></a>
+                </li>
+                <li class="nav-item " style="padding-right: 20px;">
+                    <a class="nav-link" href="/#about"><b>About Corona</b></a>
+                </li>
+                <li class="nav-item" style="padding-right: 20px;">
+                    <a class="nav-link" href="/#symptom"><b>Symptoms</b></a>
+                </li>
+                <li class="nav-item" style="padding-right: 20px;">
+                    <a class="nav-link" href="/#prevention"><b>Prevention</b></a>
+                </li>
+                <li class="nav-item" style="padding-right: 20px;">
+                    <a class="nav-link" href="/#treatment"><b>Treatment</b></a>
+                </li>
+                <li class="nav-item" style="padding-right: 20px;">
+                    <a class="nav-link" href="/news"><b>News</b></a>
+                </li>
+                <li class="nav-item" style="padding-right: 20px;">
+                    <a class="nav-link" href="/cases"><b>Cases</b></a>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-primary">Do &amp; Don't</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<div class="container">
+    <div style="padding: 20px 0;" class="entry-title">
+        <h1 class="entry"><%= news.title %></h1>
+    </div>
+
+    <!-- <div class="clock">
+        <i class="far fa-clock fa-lg"></i>
+        2 years ago
+        <a class="theme" href="">AF themes</a>
+    </div> -->
+
+    <div style="padding: 20px 0;" class="wrapper">
+        <img width="1113" src="data:image/<%=news.image.contentType%>;base64, 
+        <%=news.image.data.toString('base64')%>" alt="">
+    </div>
+
+    <div style="padding: 20px 0;" class="entry-content">
+        <p style="font-size: larger; text-align: justify;"><%= news.content %></p>
+    </div>  
+</div>
+
+<footer>
+    <div class="footer-bg" style="color: white; background-color: black; padding: 50px;">
+        <img src="images/logo-white2x.png" alt="" width="30%" height="50%" />
+        <p>This website is for health information and advice about coronavirus (COVID-19),
+            how to prevent and protect yourself from disease.
+
+            Learn about the government response to coronavirus </p>
+
+
+    </div>
+</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</html>
+
+

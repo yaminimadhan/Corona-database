@@ -1,64 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/style.css" />
-
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
-
-    <title>Hello, world!</title>
-</head>
-
-<body>
-
-    <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="#">
-            <img src="images/logo-dark2x.png" alt="" width="70%" height="50" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#homepg"><b>Home<span class="sr-only">(current)</span></b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about"><b>About Corona</b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#symptom"><b>Symptoms</b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#prevention"><b>Prevention</b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><b>Treatment</b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><b>News</b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><b>Cases</b></a>
-                </li>
-                <li>
-                    <button type="button" class="btn btn-primary">Do &amp; Don't</button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<%- include("partials/header"); -%>
 
 <section class="News">
     <div class="container">
@@ -76,7 +16,7 @@
                 <div class="exclusive-slides" dir="ltr">
                     <marquee  behavior="" direction="">
                         <% for (var i = 0; i < news.length; i++) { %>
-                        <a style="margin-right: 40px;" href="/news/<%=news._id%>">  
+                        <a style="margin-right: 40px;" href="/news/<%=news[i]._id%>">  
                             <%= news[i].title %>
                         </a>
                         <% } %>
@@ -118,8 +58,8 @@
             <div class="col-md-3 col-sm-6 editorspickdiv" style="padding-left: 0;">
                 <h5></h5><br>
                 <hr style="background-color: #F5F5F5; width: 0; height: 2px; margin: 0;">
-                <% for (var i = 0; i < news.length; i++) { %>
-                <a href="">
+                <% for (var i = (news.length-2); i < news.length; i++) { %>
+                <a href="/news/<%=news[i]._id%>">
                     <div style=" margin-top: 10px;">
                         <img src="data:image/<%=news[i].image.contentType%>;base64, 
                         <%=news[i].image.data.toString('base64')%>" style="height:160px; width: 277px;" alt="">
@@ -131,9 +71,9 @@
             <div class="col-md-3 col-sm-6" style="padding-left: 0;">
                 <h5></h5><br>
                 <hr style="background-color: #F5F5F5; width: 0; height: 2px; margin: 0;">
-                <% for (var i = 0; i < news.length; i++) { %>
-                <div style="margin-top: 10px; margin-bottom: 0; background-color: white; height: 105px;">
-                    <a href="">
+                <% for (var i = 3; i < 7; i++) { %>
+                <div style="margin-top: 10px; margin-bottom: 0; background-color: white;">
+                    <a href="/news/<%=news[i]._id%>">
                         <img style="height: 105px; width: 100px; margin-right: 7px; float: left;"
                              src="data:image/<%=news[i].image.contentType%>;base64, 
                              <%=news[i].image.data.toString('base64')%>"
@@ -150,10 +90,10 @@
         <h5>Featured Stories</h5>
         <hr style="background-color: #bb1919; width: 60px; height: 2px; margin: 0;">
         <div class="row" style="margin-top: 15px;">
-            <% for (var i = 0; i < news.length; i++) { %>
+            <% for (var i = 2; i < 6; i++) { %>
             <div class="col-sm-6 col-lg-3">
                 <div style=" background-color: white; width: 265px;">
-                    <a href="">
+                    <a href="/news/<%=news[i]._id%>">
                         <img style="height: 250px; width: 265px;"
                              src="data:image/<%=news[i].image.contentType%>;base64, 
                              <%=news[i].image.data.toString('base64')%>"
@@ -171,7 +111,7 @@
             <div  style=" margin-top: 15px;">
                 <% for (var i = 0; i < news.length; i++) { %>
                 <div style=" background-color: white; height: 240px; margin-bottom: 20px;  ">
-                    <a href="/news/<%=news._id%>">
+                    <a href="/news/<%=news[i]._id%>">
                         <img style="height: 240px; width: 280px; margin-right: 10px; float: left;"
                              src="data:image/<%=news[i].image.contentType%>;base64, 
                              <%=news[i].image.data.toString('base64')%>"
@@ -180,35 +120,15 @@
                     </a>
                     <p style=" margin-right: 10px;">
                         <%=news[i].content.substring(0, 600) + " ..."%>
-                        <a href=""> Read More</a>
+                        <a href="/news/<%=news[i]._id%>"> Read More</a>
                         </p>
                 </div>
                 <% } %>
             </div>      
     </div>
 
-    <footer>
-        <div class="footer-bg" style="color: white;">
-            <img src="images/logo-white2x.png" alt="" width="30%" height="50%" />
-            <p>This website is for health information and advice about coronavirus (COVID-19),
-                how to prevent and protect yourself from disease.
 
-                Learn about the government response to coronavirus </p>
-
-
-        </div>
-    </footer>
     
     
 </section>
-</body>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-</html>
+<%- include("partials/footer"); -%>

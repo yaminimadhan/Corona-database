@@ -137,11 +137,17 @@ app.get("/news/:newsId", function(req, res){
   
     News.findOne({_id: requestedNewsId}, function(err, news){
       res.render("article", {
-        news :news
+        news :news,
       });
     });
   
   });
+
+  // app.get("/", function(req,res){
+  //   res.render("sample");
+  // })
+
+
 // app.post("/", function(req, res){
 	    
 //   var options = {

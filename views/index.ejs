@@ -1,63 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/style.css" />
-
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
-
-    <title>State Cases</title>
-</head>
-
-<body>
-      <nav class="navbar navbar-expand-lg ">
-    <a class="navbar-brand" href="#">
-        <img src="images/logo-dark2x.png" alt="" width="70%" height="50" />
-    </a>
-    <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto">
-            <li class="nav-item ">
-                <a class="nav-link" href="/"><b>Home</b></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/#about"><b>About Corona</b></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/#symptom"><b>Symptoms</b></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/#prevention"><b>Prevention</b></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/#treatment"><b>Treatment</b></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/news"><b>News</b></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#"><b>Cases <span class="sr-only">(current)</span></b></a>
-            </li>
-            <li>
-                <a href="/#do-dont" class="btn btn-primary btn-md do-btn" role="button" aria-disabled="true">Do &amp; Don't</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<%- include("partials/header"); -%>
 <div class="frontdetails">
     <h1>CORONA IN INDIA</h1>
     <p class="confirm"> CONFIRMED:<b> <%=confirmed%> </b></p>
@@ -88,10 +29,5 @@
     </tbody>
   </table>
     
-    <!-- <form action="/" method="POST">
-        <label for="state">Search</label>
-        <input type="text" name="state" placeholder="state/City">
-        <button type="submit">Submit</button>
-    </form> -->
-</body>
-</html>
+
+  <%- include("partials/footer"); -%>
