@@ -106,10 +106,6 @@ app.get("/", function(req,res){
   res.render("home");
 })
 
-app.get("/article", function(req,res){
-  res.render("article");
-})
-
 app.get("/compose", function(req,res){
   res.render("compose");
 })
@@ -134,6 +130,18 @@ app.get("/news", function(req,res){
       });
   });
 })
+
+app.get("/news/:newsId", function(req, res){
+
+  const requestedNewsId = req.params.newsId;
+  
+    News.findOne({_id: requestedNewsId}, function(err, news){
+      res.render("article", {
+        news :news
+      });
+    });
+  
+  });
 // app.post("/", function(req, res){
 	    
 //   var options = {

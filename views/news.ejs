@@ -76,7 +76,7 @@
                 <div class="exclusive-slides" dir="ltr">
                     <marquee  behavior="" direction="">
                         <% for (var i = 0; i < news.length; i++) { %>
-                        <a style="margin-right: 40px;" href="/">  
+                        <a style="margin-right: 40px;" href="/news/<%=news._id%>">  
                             <%= news[i].title %>
                         </a>
                         <% } %>
@@ -97,7 +97,7 @@
                      <div class="carousel-inner">
                         <% for (var i = 0; i < news.length; i++) { %>
                             <div  class="carousel-item <%= i == 0 ? 'active' : '' %>">
-                                <a href="/">
+                                <a href="/news/<%=news[i]._id%>">
                                     <img style="height: 450px; background-size: cover;" src="data:image/<%=news[i].image.contentType%>;base64, 
                                     <%=news[i].image.data.toString('base64')%>" class="d-block w-100" alt="">
                                     <h4 class="mainstoryheader"><%= news[i].title %></h4>
@@ -118,7 +118,7 @@
             <div class="col-md-3 col-sm-6 editorspickdiv" style="padding-left: 0;">
                 <h5></h5><br>
                 <hr style="background-color: #F5F5F5; width: 0; height: 2px; margin: 0;">
-                <% for (var i = 0; i < 2; i++) { %>
+                <% for (var i = 0; i < news.length; i++) { %>
                 <a href="">
                     <div style=" margin-top: 10px;">
                         <img src="data:image/<%=news[i].image.contentType%>;base64, 
@@ -171,7 +171,7 @@
             <div  style=" margin-top: 15px;">
                 <% for (var i = 0; i < news.length; i++) { %>
                 <div style=" background-color: white; height: 240px; margin-bottom: 20px;  ">
-                    <a href="">
+                    <a href="/news/<%=news._id%>">
                         <img style="height: 240px; width: 280px; margin-right: 10px; float: left;"
                              src="data:image/<%=news[i].image.contentType%>;base64, 
                              <%=news[i].image.data.toString('base64')%>"
