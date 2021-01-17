@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
 
-    <title>Hello, world!</title>
+    <title>COVID-19</title>
 </head>
 
 <body>
@@ -25,13 +25,13 @@
         <a class="navbar-brand" href="#">
             <img src="images/logo-dark2x.png" alt="" width="70%" height="50" />
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mx-auto ">
                 <li class="nav-item active">
                     <a class="nav-link" href="#homepg"><b>Home<span class="sr-only">(current)</span></b></a>
                 </li>
@@ -45,7 +45,7 @@
                     <a class="nav-link" href="#prevention"><b>Prevention</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><b>Treatment</b></a>
+                    <a class="nav-link" href="#treatment"><b>Treatment</b></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/news"><b>News</b></a>
@@ -54,21 +54,20 @@
                     <a class="nav-link" href="/cases"><b>Cases</b></a>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-primary">Do &amp; Don't</button>
+                    <a href="#do-dont" class=" btn btn-primary btn-md do-btn " role="button" aria-disabled="true" >Do &amp; Don't</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- header -->
-    <section id="homepg">
-        <div class="container homedetails">
+      <section id="homepg">
+        <div class="container homedetails" style="background-image:url(images/blog/shape-a.png) ;">
             <div class="row">
-                <div class="col-sm-3 col-md-5 home1">
+                <div class="col-sm-3  col-lg-5 home1">
                     <h3>
-                        <b>CORONA</b>
-                        <sup>COVID-19</sup>
-                        <sub>VIRUS</sub>
+                        CORONA <b style="color: #FF5363;">COVID-19</b> VIRUS
+
                     </h3>
                     <p>
                         The Coronavirus (COVID-19) was first reported in Wuhan, Hubei, China in
@@ -76,12 +75,12 @@
                         World Health Organization (WHO) on 11 March 2020.
                     </p>
                     <div class="homebtn">
-                        <button type="button" class="btn btn-primary">How to Protect </button>
-                        <a href="#about"><b>About COVID-19</b><i class='fas fa-angle-right'></i></a>
+                        <a href="#do-dont" class="btn btn-primary btn-md  pro-btn " role="button" aria-disabled="true">How to Protect <i class="fas fa-shield-virus"></i></a>
+                        <a class="btn-about" href="#about"><b>About COVID-19</b><i class='fas fa-angle-right'></i></a>
                     </div>
 
                 </div>
-                <div class="col-sm-9 col-md-7">
+                <div class="col-sm-9 col-lg-7">
                     <img src="images/gfx/header-a.png" width="100%" height="100%" />
                 </div>
             </div>
@@ -205,57 +204,58 @@
 
         <!-- protection -->
 
-<section id="prevention">
-        <div class="container">
-            <h5>HOW TO PROTECT YOURSELF?</h5>
-            <h3>PREVENTION & ADVICE</h3>
-            <p>
-                There is currently no vaccine to prevent coronavirus disease 2019 (COVID-19).
-                The best way to prevent<br> illness is to avoid being exposed to this virus.
-                Stay aware of the latest information on the COVID-19<br> outbreak,
-                available on the WHO website and through your national and local public health authority.
-            </p>
-            <div class="row prevent-info">
-                <div class="col-lg-3">
-                    <img class="rounded-circle prevent-img"
-                        src="images/gfx/advice-a.png"
-                        alt="Advice image" width="120" height="120">
-                    <h2>Wash your hands frequently</h2>
-                    <p>Regularly and thoroughly clean your hands with
-                         an alcohol-based hand rub or wash them with soap 
-                         and water for at least 20 seconds.</p>
-                    
-                </div>
-                <div class="col-lg-3">
-                    <img class="rounded-circle prevent-img"
-                        src="images/gfx/advice-b.png"
-                        alt="Advice image" width="120" height="120">
-                    <h2>Maintain social distancing</h2>
-                    <p>Maintain at least 1 metre (3 feet) distance between yourself & 
-                        anyone who is coughing or sneezing. If you are too close, get chance to infected.</p>
-                   
-                </div>
-                <div class="col-lg-3">
-                    <img class="rounded-circle prevent-img"
-                        src="images/gfx/advice-c.png"
-                        alt="Advice image" width="120" height="120">
-                    <h2>Avoid touching face</h2>
-                    <p>Hands touch many surfaces and can pick up viruses.
-                     So, hands can transfer the virus to your eyes, nose or mouth and can make you sick.</p>
-                    
-                </div>
-                <div class="col-lg-3">
-                    <img class="rounded-circle prevent-img"
-                        src="images/gfx/advice-d.png"
-                        alt="Advice image" width="120" height="120">
-                    <h2>Practice respiratory hygiene</h2>
-                    <p>Maintain good respiratory
-                         hygiene as covering your mouth & nose with your 
-                         bent elbow or tissue when cough or sneeze.</p>
-                    
+        <section id="prevention">
+            <div class="container">
+                <h5>HOW TO PROTECT YOURSELF?</h5>
+                <h3>PREVENTION & ADVICE</h3>
+                <p>
+                    There is currently no vaccine to prevent coronavirus disease 2019 (COVID-19).
+                    The best way to prevent<br> illness is to avoid being exposed to this virus.
+                    Stay aware of the latest information on the COVID-19<br> outbreak,
+                    available on the WHO website and through your national and local public health authority.
+                </p>
+                <div class="row prevent-info">
+                    <div class="col-lg-3">
+                        <img class="rounded-circle prevent-img"
+                            src="images/gfx/advice-a.png"
+                            alt="Advice image" width="120" height="120">
+                        <h2>Wash your hands frequently</h2>
+                        <p>Regularly and thoroughly clean your hands with
+                             an alcohol-based hand rub or wash them with soap
+                             and water for at least 20 seconds.</p>
+
+                    </div>
+                    <div class="col-lg-3">
+                        <img class="rounded-circle prevent-img"
+                            src="images/gfx/advice-b.png"
+                            alt="Advice image" width="120" height="120">
+                        <h2>Maintain social distancing</h2>
+                        <p>Maintain at least 1 metre (3 feet) distance between yourself &
+                            anyone who is coughing or sneezing. If you are too close, get chance to infected.</p>
+
+                    </div>
+                    <div class="col-lg-3">
+                        <img class="rounded-circle prevent-img"
+                            src="images/gfx/advice-c.png"
+                            alt="Advice image" width="120" height="120">
+                        <h2>Avoid touching face</h2>
+                        <p>Hands touch many surfaces and can pick up viruses.
+                         So, hands can transfer the virus to your eyes, nose or mouth and can make you sick.</p>
+
+                    </div>
+                    <div class="col-lg-3">
+                        <img class="rounded-circle prevent-img"
+                            src="images/gfx/advice-d.png"
+                            alt="Advice image" width="120" height="120">
+                        <h2>Practice respiratory hygiene</h2>
+                        <p>Maintain good respiratory
+                             hygiene as covering your mouth & nose with your
+                             bent elbow or tissue when cough or sneeze.</p>
+
+                    </div>
                 </div>
             </div>
-        </div>
+
 
         <div class="container prevent-card">
             <div class="card">
@@ -264,23 +264,23 @@
                         <div class="card-body">
                             <h4 class="card-title">Take steps to protect others</h4>
                             <ul class="card-text">
-                                <li>Stay home if you’re sick – Stay home if you are sick, 
+                                <li style="list-style-image:url(images/blog/check-mark.png);"><b>Stay home if you’re sick</b> – Stay home if you are sick,
                                     except to get medical care.
                                 </li>
-                                <li>Cover your mouth and nose – with a tissue when you cough or sneeze
+                                <li style="list-style-image:url(images/blog/check-mark.png);"><b>Cover your mouth and nose</b> – with a tissue when you cough or sneeze
                                     (throw used tissues in the trash) or use the inside of your elbow.</li>
-                                <li>Wear a facemask if you are sick – You should wear a facemask when
+                                <li style="list-style-image:url(images/blog/check-mark.png);"><b>Wear a facemask if you are sick</b> – You should wear a facemask when
                                     you are around other people (e.g., sharing a room or vehicle)
                                     and before you enter a healthcare provider’s</li>
-                                <li>Clean AND disinfect frequently touched surfaces daily –
+                                <li style="list-style-image:url(images/blog/check-mark.png);"><b>Clean AND disinfect frequently touched surfaces daily</b> –
                                     This includes phones, tables, light switches, doorknobs,
                                     countertops, handles, desks, toilets, faucets, and sinks.</li>
-                                <li>Clean the dirty surfaces – Use detergent or soap and water prior to disinfection.
+                                <li style="list-style-image:url(images/blog/check-mark.png);"><b>Clean the dirty surfaces</b> – Use detergent or soap and water prior to disinfection.
                                 </li>
-                                <li>Stay informed about the local COVID-19 situation –
+                                <li style="list-style-image:url(images/blog/check-mark.png);"><b>Stay informed about the local COVID-19 situation</b> –
                                     Get up-to-date information about local COVID-19 activity from public health
                                     officials.</li>
-                                <li>Dedicated, lined trash can – If possible, dedicate a lined trash can for the ill
+                                <li style="list-style-image:url(images/blog/check-mark.png);"><b>Dedicated, lined trash can</b> – If possible, dedicate a lined trash can for the ill
                                     person.
                                     Use gloves when removing garbage bags, and handling & disposing of trash.</li>
                             </ul>
@@ -293,10 +293,10 @@
             </div>
         </div>
 
-        <div>
+        <div class=" container follow-steps">
             <h3>Follow steps to wash hands</h3>
             <h6>Why do I need wash hand</h6>
-            <div class="row">
+            <div class="row follow-part">
                 <div class="col-lg-2">
                     <img class="rounded-circle prevent-img"
                         src="images/gfx/hand-a.png"
@@ -307,177 +307,201 @@
                     <img class="rounded-circle prevent-img"
                         src="images/gfx/hand-b.png"
                         alt="follow steps image" width="100" height="100">
-                    
+
                     <p>Palm to Palm</p>
-                    
+
                 </div>
                 <div class="col-lg-2">
                     <img class="rounded-circle prevent-img"
                         src="images/gfx/hand-c.png"
                         alt="follow steps image" width="100" height="100">
-                    
+
                     <p>Between Fingers</p>
-                    
+
                 </div>
                 <div class="col-lg-2">
                     <img class="rounded-circle prevent-img"
                         src="images/gfx/hand-d.png"
                         alt="follow steps image" width="100" height="100">
-                    
+
                     <p>Back to Hands</p>
-                    
+
                 </div>
                 <div class="col-lg-2">
                     <img class="rounded-circle prevent-img"
                         src="images/gfx/hand-e.png"
                         alt="follow steps image" width="100" height="100">
-                    
+
                     <p>Clean with Water</p>
                 </div>
                 <div class="col-lg-2">
                     <img class="rounded-circle prevent-img"
                         src="images/gfx/hand-f.png"
                         alt="follow steps image" width="100" height="100">
-                   
+
                     <p>Focus on Wrist</p>
-                    \
+
                 </div>
-            </div><!-- /.row -->
+            </div>
         </div>
 </section>
 
-        <section>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h5>BE CAREFULL & STAY SAFE</h5>
-                        <h3>TREATMENT FOR CORONAVIRUS</h3>
-                        <p>To date, there is no vaccine and no specific antiviral medicine to prevent or treat
-                            COVID-2019.
-                            However, those affected should receive care to relieve symptoms. People with serious illness
-                            should be hospitalized. Most patients recover thanks to supportive care.
+<section id="treatment" style="background-image:url(images/blog/shape-c.png) ;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 treat-1">
+                <h5>BE CAREFULL & STAY SAFE</h5>
+                <h3>TREATMENT FOR CORONAVIRUS</h3>
+                <p><b>To date, there is no vaccine and no specific antiviral medicine to prevent or treat
+                    COVID-2019.</b></p>
+                <p class="sec"> However, those affected should receive care to relieve symptoms. People with serious illness
+                    should be hospitalized. Most patients recover thanks to supportive care.
 
-                            Antibiotics do not help, as they do not work against viruses.
-                            Treatment aims to relieve the symptoms while your body fights the illness.
-                            You'll need to stay in isolation, away from other people, until you have recovered.</p>
+                    Antibiotics do not help, as they do not work against viruses.
+                    Treatment aims to relieve the symptoms while your body fights the illness.
+                    You'll need to stay in isolation, away from other people, until you have recovered.</p>
+            </div>
+            <div class="col-lg-6 treat-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Self Care</h5>
+
+                        If you have mild symptoms, stay at home until you’ve recovered. You can relieve your
+                        symptoms if
+                        you:
+                        <ul>
+                            <li>Rest and sleep</li>
+                            <li>Keep warm</li>
+                            <li>Drink plenty of liquids</li>
+                            <li>Use a room humidifier or take a hot shower to help ease a sore throat and cough
+                            </li>
+                        </ul>
+                        <h5 class="card-title">Medical Treatments</h5>
+                        If you develop a fever, cough, and have difficulty breathing, promptly seek medical
+                        care.
+                        Call in advance and tell your health provider of any recent travel or recent contact
+                        with travelers.
                     </div>
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Self Care</h5>
+                </div>
+            </div>
+        </div>
 
-                                If you have mild symptoms, stay at home until you’ve recovered. You can relieve your
-                                symptoms if
-                                you:
-                                <ul>
-                                    <li>Rest and sleep</li>
-                                    <li>Keep warm</li>
-                                    <li>Drink plenty of liquids</li>
-                                    <li>Use a room humidifier or take a hot shower to help ease a sore throat and cough
-                                    </li>
-                                </ul>
-                                <h5 class="card-title">Medical Treatments</h5>
-                                If you develop a fever, cough, and have difficulty breathing, promptly seek medical
-                                care.
-                                Call in advance and tell your health provider of any recent travel or recent contact
-                                with travelers.
+    </div>
+</section>
 
+
+        <section id="do-dont">
+
+            <div class="container">
+                <h5>DO’S & DON’TS</h5>
+                <h3>PROTECT YOURSELF</h3>
+                <p>The best thing you can do now is plan for how you can adapt your daily routine.
+                    Take few steps<br> to protect yourself as Clean your hands often, Avoid close contact,
+                    Cover coughs and sneezes, clean daily<br> used surfaces etc.
+                    The best way to prevent illness is to avoid being exposed to this virus.</p>
+
+                <div class=" container-fluid row do-dont-part">
+                    <div class="col-md-3">
+                        <div class="dont-part">
+
+                            <div class="frame">
+                            <p>Avoid Close Contact</p>
+
+                            <i class="fas fa-times rounded-circle dont-check"></i>
+                            <img class="rounded-circle dont-imgs " src="images/gfx/donts-a.png"
+                                alt="Generic placeholder image" width="140" height="140" >
+                            </div>
+
+                             <div class="frame">
+                            <p>Don’t Touch Face</p>
+                            <i class="fas fa-times rounded-circle dont-check"></i>
+                            <img class="rounded-circle dont-imgs " src="images/gfx/donts-b.png"
+                                alt="Generic placeholder image" width="140" height="140" >
+                            </div>
+
+                            <div class="frame">
+                            <p>Social Distancing</p>
+                            <i class="fas fa-times rounded-circle dont-check"></i>
+                            <img class="rounded-circle dont-imgs" src="images/gfx/donts-c.png"
+                                alt="Generic placeholder image" width="140" height="140" >
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <img src="images/gfx/protect.png" width="100%" height="100%">
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="do-part">
+
+                            <div class="frame">
+
+                            <p>Wash Your Hands</p>
+                            <i class="fas fa-check rounded-circle do-check"></i>
+                            <img class="rounded-circle dont-imgs" src="images/gfx/dos-a.png"
+                                alt="Generic placeholder image" width="140" height="140">
+
+
+                            </div>
+
+                            <div class="frame">
+                            <p>Drink Much Water</p>
+                            <i class="fas fa-check rounded-circle do-check"></i>
+                            <img class="rounded-circle dont-imgs" src="images/gfx/dos-b.png"
+                                alt="Generic placeholder image" width="140" height="140" >
+                            </div>
+
+                            <div class="frame">
+                            <p>Use Face Mask</p>
+                            <i class="fas fa-check rounded-circle do-check"></i>
+                            <img class="rounded-circle dont-imgs" src="images/gfx/dos-c.png"
+                                alt="Generic placeholder image" width="140" height="140" >
                             </div>
 
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
 
-        <section>
 
-            <div>
-                <h5>DO’S & DON’TS</h5>
-                <h3>PROTECT YOURSELF</h3>
-                <p>The best thing you can do now is plan for how you can adapt your daily routine.
-                    Take few steps to protect yourself as Clean your hands often, Avoid close contact,
-                    Cover coughs and sneezes, clean daily used surfaces etc.
-                    The best way to prevent illness is to avoid being exposed to this virus.</p>
-
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div>
-                            <p>Avoid Close Contact</p>
-                            <img class="rounded-circle dont-imgs " src="images/gfx/donts-a.png"
-                                alt="Generic placeholder image" width="140" height="140" style="float: left;">
-
-
-                            <p>Don’t Touch Face</p>
-                            <img class="rounded-circle dont-imgs " src="images/gfx/donts-b.png"
-                                alt="Generic placeholder image" width="140" height="140" style="float: left;">
-
-
-                            <p>Social Distancing</p>
-                            <img class="rounded-circle dont-imgs" src="images/gfx/donts-c.png"
-                                alt="Generic placeholder image" width="140" height="140" style="float: left;">
-
-                        </div>
-
-                    </div>
-                    <div class="col-lg-4">
-                        <img src="images/gfx/protect.png" width="60%" height="auto">
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div>
-                            <p>Avoid Close Contact</p>
-                            <img class="rounded-circle dont-imgs" src="images/gfx/donts-a.png"
-                                alt="Generic placeholder image" width="140" height="140" style="float: left;">
-
-
-                            <p>Don’t Touch Face</p>
-                            <img class="rounded-circle dont-imgs" src="images/gfx/donts-b.png"
-                                alt="Generic placeholder image" width="140" height="140" style="float: left;">
-
-                            <p>Social Distancing</p>
-                            <img class="rounded-circle dont-imgs" src="images/gfx/donts-c.png"
-                                alt="Generic placeholder image" width="140" height="140" style="float: left;">
-                        </div>
-                    </div>
-                </div>
-        </section>
-
-
-
-        <section>
-            <div>
+        <section id="blogs">
+            <div class="container">
                 <h5>RECENT FROM BLOG</h5>
                 <h3>LATEST UPDATE</h3>
 
-                <div class="row">
+                <div class="row blog-part">
                     <div class="col-md-4">
                         <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" src="images/blog/blog-a.jpg" alt="Card image cap">
+                            <img class="card-img-top spreadimg" src="images/blog/blog-a.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-head">Caring for someone at home</p>
+                                <p class="card-text">Most people who get sick with COVID-19 will have only mild illness
+                                     and should recover at home. Care at home can help stop the spread of COVID-19.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" src="images/blog/blog-b.jpg" alt="Card image cap">
+                            <img class="card-img-top spreadimg" src="images/blog/blog-b.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-head">15 ways to keep safe and healthy</p>
+                                <p class="card-text">Most people who get sick with COVID-19 will have
+                                    only mild illness and should recover at home. Care at home can help stop the spread of COVID-19.</p>
 
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" src="images/blog/blog-c.jpg" alt="Card image cap">
+                            <img class="card-img-top spreadimg" src="images/blog/blog-c.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a
-                                    natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-head">If You Think You Are Sick</p>
+                                <p class="card-text">If you are sick with COVID-19 or think you might have it,
+                                    follow the steps below to help protect other people in your home and community.</p>
                             </div>
                         </div>
                     </div>
@@ -486,18 +510,20 @@
 
 
         <footer>
-            <div class="footer-bg" style="color: white;">
-                <img src="images/logo-white2x.png" alt="" width="30%" height="50%" />
-                <p>This website is for health information and advice about coronavirus (COVID-19),
+            <div class="footer-bg" style="color: white;   background-image: url(images/blog/shape-c.png) ;">
+                <img src="images/logo-white2x.png" alt="" width="20%" height="50%" />
+                <p>This website is for health information and advice about coronavirus (COVID-19),<br>
                     how to prevent and protect yourself from disease.
 
                     Learn about the government response to coronavirus </p>
-
-
+             <hr class="foot-hr">
+                <p>Disclaimer: We hope you find the information presented on this website useful.
+                    This website is for general information and raise awareness of (2019-nCoV) only.<br>
+                        All the information based on WHO, NHS and CDC website.
+                        Information on our website is meant for awareness,
+                        if you have any doubt please verify from respective site.</p>
             </div>
         </footer>
-
-
 
 
         <!-- Optional JavaScript -->
