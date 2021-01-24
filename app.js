@@ -1,4 +1,5 @@
 const express=require("express");
+// const https = require("https");
 var https = require('follow-redirects').https;
 var fs = require('fs');
 const bodyParser=require("body-parser");
@@ -36,70 +37,58 @@ const News = new mongoose.model('News',newsSchema);
 
 
 app.get("/cases", function(req, res){
-   
-  var options = {
+  //https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true
+
+
+// var options = {
+//   'method': 'GET',
+//   'hostname': 'api.rootnet.in',
+//   'path': '/covid19-in/stats/latest',
+//   'headers': {
+//   },
+//   'maxRedirects': 20
+// };
+
+var options = {
     'method': 'GET',
-    'hostname': 'api.covidindiatracker.com',
-    'path': '/total.json',
+    'hostname': 'api.apify.com',
+    'path': '/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true',
     'headers': {
     },
     'maxRedirects': 20
   };
   
-  var request = https.request(options, function (response) {
-    var chunks = [];
-  
-    response.on("data", function (chunk) {
-      chunks.push(chunk);
-    });
-  
-    response.on("end", function (chunk) {
-      var body = Buffer.concat(chunks);
-      var data=JSON.parse(body);
-      var confirmed = data.confirmed;
-      var active = data.active;
-      var recovered = data.recovered;
-      var death = data.deaths;
 
-      var options = {
-        'method': 'GET',
-        'hostname': 'api.covidindiatracker.com',
-        'path': '/state_data.json',
-        'headers': {
-        },
-        'maxRedirects': 20
-      };
-      
-      var request = https.request(options, function (response) {
-        var chunks = [];
-      
-        response.on("data", function (chunk) {
-          chunks.push(chunk);
-        });
-        
-        response.on("end", function (chunk) {
-          var body = Buffer.concat(chunks);
-          data=JSON.parse(body);
-          res.render("index",{confirmed:confirmed, active:active, recovered:recovered, death:death, dataset:data });
-        });
-      
-        response.on("error", function (error) {
-          console.error(error);
-        });
-      });
-      
-      request.end();
 
-      
-      
-    });
-  
-    response.on("error", function (error) {
-      console.error(error);
-    });
+var request = https.request(options, function (response) {
+  var chunks = [];
+
+  response.on("data", function (chunk) {
+    chunks.push(chunk);
   });
-  
-  request.end();
+
+  response.on("end", function (chunk) {
+    var body = Buffer.concat(chunks);
+    var data=JSON.parse(body);
+    var totalcases = data.totalCases;
+    var activecases = data.activeCases;
+    var newactive = data.activeCasesNew;
+    var recovered = data.recovered;
+    var newrecovered = data.recoveredNew;
+    var deaths = data.deaths;
+    var newdeaths = data.deathsNew;
+    var lastupdate = data.lastUpdatedAtApify;
+    var dataset = data.regionData
+    res.render("index",{total:totalcases, active:activecases, recovered:recovered, death:deaths, dataset:dataset});
+  });
+
+  response.on("error", function (error) {
+    console.error(error);
+  });
+});
+
+request.end();
+
 });		
 
 app.get("/", function(req,res){

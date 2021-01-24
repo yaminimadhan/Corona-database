@@ -1,33 +1,33 @@
 <%- include("partials/header"); -%>
+
 <div class="frontdetails">
     <h1>CORONA IN INDIA</h1>
-    <p class="confirm"> CONFIRMED:<b> <%=confirmed%> </b></p>
+    <p class="confirm"> TOTAL CASES:<b> <%=total%> </b></p>
     <p class="act"> ACTIVE:<b><%=active%></b></p>
     <p class="recover"> RECOVERED: <b><%=recovered%></b></p>
     <p class="death"> DEATH: <b><%=death%></b></p>
-  </div>
-  <table id="coronadetails">
-    <thread>
-      <tr>
-        <th>State</th>
-        <th>Confirmed</th>
-        <th>Active</th>
-        <th>Recovered</th>
-        <th>Death</th>
-      </tr>
-    </thread>
-    <tbody>
-      <% dataset.forEach(function(data){ %>
-      <tr>
-        <td><%= data.state %></td>
-        <td><%= data.confirmed %></td>
-        <td><%=data.active%></td>
-        <td><%=data.recovered%></td>
-        <td> <%=data.deaths%></td>
-      </tr>
-      <% }) %>
-    </tbody>
-  </table>
+    <table id="coronadetails">
+      <thread>
+        <tr>
+          <th>State</th>
+          <th>Active</th>
+          <th>New Infected</th>
+          <th>Recovered</th>
+          <th>Death</th>
+        </tr>
+      </thread>
+      <tbody>
+        <% dataset.forEach(function(data){ %>
+        <tr>
+          <td><%= data.region %></td>
+          <td><%= data.totalInfected %></td>
+          <td><%=data.newInfected%></td>
+          <td><%=data.recovered%></td>
+          <td> <%=data.deceased%></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+</div>
     
-
   <%- include("partials/footer"); -%>
