@@ -79,7 +79,7 @@ var request = https.request(options, function (response) {
     var newdeaths = data.deathsNew;
     var lastupdate = data.lastUpdatedAtApify;
     var dataset = data.regionData
-    res.render("index",{total:totalcases, active:activecases, recovered:recovered, death:deaths, dataset:dataset});
+    res.render("index",{total:totalcases, active:activecases, recovered:recovered, death:deaths, dataset:dataset, lastupdate:lastupdate});
   });
 
   response.on("error", function (error) {
@@ -109,7 +109,7 @@ app.post("/compose", upload.single('image'), (req, res, next) => {
       } 
   }); 
   newnews.save();
-  console.log(newnews); 
+  res.redirect("/news");
 })
 
 app.get("/news", function(req,res){
